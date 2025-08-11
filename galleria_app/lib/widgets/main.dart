@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'screens/welcome_screen.dart';
+import '../screens/welcome_screen.dart';
 
 // The main entry point of the application
 void main() {
@@ -15,11 +15,11 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Galleria App',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.green,
         fontFamily: 'Inter', // Using a clean, modern font
-        scaffoldBackgroundColor: Colors.white,
+        scaffoldBackgroundColor: const Color.fromRGBO(164, 246, 211, 1),
         appBarTheme: const AppBarTheme(
-          backgroundColor: Colors.white,
+          backgroundColor: Color.fromARGB(255, 106, 169, 113),
           elevation: 0,
           iconTheme: IconThemeData(color: Colors.black),
           titleTextStyle: TextStyle(
