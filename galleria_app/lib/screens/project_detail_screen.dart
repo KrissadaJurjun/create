@@ -1,8 +1,7 @@
-// screens/project_detail_screen.dart
 import 'package:flutter/material.dart';
 
 class ProjectDetailScreen extends StatelessWidget {
-  const ProjectDetailScreen({Key? key}) : super(key: key);
+  const ProjectDetailScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -22,7 +21,6 @@ class ProjectDetailScreen extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            // รูปภาพโปรเจกต์
             Container(
               height: 250,
               color: Colors.grey[300],
@@ -52,7 +50,6 @@ class ProjectDetailScreen extends StatelessWidget {
                     style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
                   ),
                   const SizedBox(height: 8),
-                  // แถบรูปภาพ Gallery
                   SizedBox(
                     height: 120,
                     child: ListView(
@@ -70,7 +67,6 @@ class ProjectDetailScreen extends StatelessWidget {
                     style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
                   ),
                   const SizedBox(height: 8),
-                  // แถบ Materials
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
@@ -90,7 +86,6 @@ class ProjectDetailScreen extends StatelessWidget {
   }
 }
 
-// Helper methods สำหรับสร้าง widget ย่อยๆ
 Widget _buildGalleryImage(String imageUrl) {
   return Container(
     margin: const EdgeInsets.symmetric(horizontal: 4),

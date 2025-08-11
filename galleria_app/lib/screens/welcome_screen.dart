@@ -1,8 +1,7 @@
-// screens/welcome_screen.dart
 import 'package:flutter/material.dart';
 
 class WelcomeScreen extends StatelessWidget {
-  const WelcomeScreen({Key? key}) : super(key: key);
+  const WelcomeScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -13,11 +12,10 @@ class WelcomeScreen extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              // โลโก้แอป (สามารถใช้ Icon หรือ Image ได้)
               Container(
                 width: 100,
                 height: 100,
-                color: Colors.deepPurple[100], // ใช้สีพื้นหลังตามรูป
+                color: Colors.deepPurple[100],
                 child: const Icon(
                   Icons.image,
                   size: 60,
@@ -42,10 +40,11 @@ class WelcomeScreen extends StatelessWidget {
               const SizedBox(height: 50),
               ElevatedButton(
                 onPressed: () {
-                  Navigator.pushNamed(context, '/home'); // ไปยังหน้า HomeScreen
+                  Navigator.pushNamed(context, '/home');
                 },
                 style: ElevatedButton.styleFrom(
-                  foregroundColor: Colors.white, backgroundColor: Colors.black,
+                  backgroundColor: Colors.black,
+                  foregroundColor: Colors.white,
                   minimumSize: const Size(double.infinity, 50),
                 ),
                 child: const Text('EXPLORE GALLERY'),
