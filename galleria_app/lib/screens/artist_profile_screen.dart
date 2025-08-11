@@ -173,7 +173,7 @@ class StatItem extends StatelessWidget {
   final String count;
   final String label;
 
-  const StatItem({Key? key, required this.count, required this.label}) : super(key: key);
+  const StatItem({super.key, required this.count, required this.label});
 
   @override
   Widget build(BuildContext context) {

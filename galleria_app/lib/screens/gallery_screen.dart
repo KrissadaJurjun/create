@@ -9,7 +9,7 @@ class GalleryScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('GALLERIA'),
+        title: const Text('I-BIT GALLERY'),
         centerTitle: false,
         actions: [
           IconButton(onPressed: () {}, icon: const Icon(Icons.search)),
@@ -69,24 +69,24 @@ class GalleryScreen extends StatelessWidget {
     // Dummy data for the grid
     final List<Map<String, String>> galleryItems = [
       {
-        'image': 'https://images.unsplash.com/photo-1542361345-89e58247f2d5?w=500',
-        'title': 'Geometric Harmony',
-        'subtitle': 'Studio Archform',
+        'image': 'https://scontent.fbkk12-6.fna.fbcdn.net/v/t39.30808-6/509430474_1866758960786505_8350560371033300404_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeE08n8WDB5zu6B2-ByewI7qFzRIHz6z_mgXNEgfPrP-aFf-R5LVfph18XLvSlNx5ZdWZYRvwMFrT6umM2JrO7HW&_nc_ohc=X-SzCoA_RTsQ7kNvwFocgMX&_nc_oc=AdmHlMU9yBT3HqPsYx-yPkIfNQpkloXsP0If1n_XfNnsRhZt0kwSkgoFMEgj6-wunj-hrqkm7UIBAqkJrioCte_N&_nc_zt=23&_nc_ht=scontent.fbkk12-6.fna&_nc_gid=0CVBQx3lgiVDfbjAYCwRwA&oh=00_AfWq6Y9J_Q4VicfQCOMSLZhvBx7DRqnaOHSomgNnV45EfA&oe=68A028C6',
+        'title': 'Krissada Jurjun',
+        'subtitle': 'Genius Student',
       },
       {
-        'image': 'https://images.unsplash.com/photo-1512819432649-16d8a82422d5?w=500',
-        'title': 'Minimal Interior',
-        'subtitle': 'Design Collective',
+        'image': 'https://scontent.fbkk8-2.fna.fbcdn.net/v/t1.6435-9/182772711_1282017338860547_1794917240537824345_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeEQECfcBiQCy92oi5nPsxa0XoPXMkFh1q1eg9cyQWHWrVW-oFDgHFsNx_0RcE69FusmQjSpIrhxhgqzhYuv9U_B&_nc_ohc=0XGkC5XVgC8Q7kNvwGBCkGg&_nc_oc=AdkmdrZt-R77yhG_ywOm4Sh9at6HP_uGKP8zisdxMf8XF1kv3PgEGzmBBlU0TVfvET0vpAimCZWvZNugH7xKm7PP&_nc_zt=23&_nc_ht=scontent.fbkk8-2.fna&_nc_gid=UN255V5EdD7CMMmZCdhVrA&oh=00_AfWi_MKZzJn6UpjFWAB9zxwkEboQsB8EmtdI19tIpYfinw&oe=68C1A203',
+        'title': 'Nutthawit Morkkaew',
+        'subtitle': 'Genius Programmer',
       },
       {
-        'image': 'https://images.unsplash.com/photo-1448375240586-882707db888b?w=500',
-        'title': 'Light & Shadow',
-        'subtitle': 'Elena Cortez',
+        'image': 'https://scontent.fbkk12-3.fna.fbcdn.net/v/t39.30808-6/391654853_1698097070658543_5165441897896227362_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeFoL26ajn0fu2niVW-XUX3CvgNllHu3T4q-A2WUe7dPivxe29cEKMkapAz-nJz95-Icgx56t47YKZh2WKrx1rD8&_nc_ohc=CJuDHn2M3ewQ7kNvwGdR0xk&_nc_oc=AdmwhYjGnon5uCoBJ-IZ8nA_5CytM4ho__vzUySrsEXr2NLOeFJE-h5s8SJQ1LiJqKpkx_VmaF4wTgOrvaq02YAf&_nc_zt=23&_nc_ht=scontent.fbkk12-3.fna&_nc_gid=X3i0pYdrs5a8ZuXrEhL2JQ&oh=00_AfVpVP89eHWqKbGcNEz5opn9vMjOtBKgv1hGPRsR1y4z4w&oe=68A03744',
+        'title': 'Shuncey Tan Balba',
+        'subtitle': 'Genius Programmer',
       },
       {
-        'image': 'https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?w=500',
-        'title': 'Urban Perspectives',
-        'subtitle': 'Metro Architects',
+        'image': 'https://scontent.fbkk13-1.fna.fbcdn.net/v/t39.30808-1/486554803_1915607449268787_7219523213189300594_n.jpg?stp=dst-jpg_s200x200_tt6&_nc_cat=105&ccb=1-7&_nc_sid=e99d92&_nc_eui2=AeGBLXJkOyJIqiUQYPQUKPTnymsIRszGM0XKawhGzMYzRW30RwoAi_CelY_KifFL-fzLucGjyuroK494jxIW5zsq&_nc_ohc=FlfdVxi9CFMQ7kNvwG11YsP&_nc_oc=Adm2EAlEn8FF-e2I86fI4IzZ8Bg9CsNB--ga-ZWnPnCVf6Q0mBDv5RCM-k_NM4upAogBPyajdg1KTfnX5PxAxldk&_nc_zt=24&_nc_ht=scontent.fbkk13-1.fna&_nc_gid=cGO869nHGAKkqE96fBIvkQ&oh=00_AfXCchMuyj2-Mpir0NKPdQOeROcDMibYQ6bV9gk_0SBLMA&oe=68A02ADC',
+        'title': 'Chatchawee Rajchaposri ',
+        'subtitle': 'ไอเอ๋อ ไอหนูดัมโบ้',
       },
     ];
 

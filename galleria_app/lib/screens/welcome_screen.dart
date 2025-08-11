@@ -22,7 +22,7 @@ class WelcomeScreen extends StatelessWidget {
                 width: 80,
                 height: 80,
                 decoration: BoxDecoration(
-                  color: const Color(0xFF7B61FF),
+                  color: const Color.fromARGB(255, 39, 223, 48),
                   borderRadius: BorderRadius.circular(20),
                 ),
                 child: const Icon(Icons.collections, color: Colors.white, size: 40),
@@ -30,7 +30,7 @@ class WelcomeScreen extends StatelessWidget {
               const SizedBox(height: 24),
               // App Title
               const Text(
-                'GALLERIA',
+                'I-BIT GALLERY',
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   fontSize: 28,
@@ -119,7 +119,7 @@ class WelcomeScreen extends StatelessWidget {
               ),
               const SizedBox(height: 16),
               const Text(
-                'Curated collections of exceptional design',
+                'หล่อเหลา คือ เราเอง',
                 textAlign: TextAlign.center,
                 style: TextStyle(fontSize: 12, color: Colors.grey),
               ),
