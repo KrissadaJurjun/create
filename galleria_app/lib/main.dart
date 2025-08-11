@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:galleria_app/screens/welcome_screen.dart';
-import 'package:galleria_app/screens/home_screen.dart';
-import 'package:galleria_app/screens/profile_screen.dart';
-import 'package:galleria_app/screens/project_detail_screen.dart';
+import 'screens/welcome_screen.dart';
 
+// The main entry point of the application
 void main() {
   runApp(const MyApp());
 }
@@ -14,23 +12,24 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Galleria App',
       theme: ThemeData(
-        scaffoldBackgroundColor: Colors.white,
         primarySwatch: Colors.blue,
+        fontFamily: 'Inter', // Using a clean, modern font
+        scaffoldBackgroundColor: Colors.white,
         appBarTheme: const AppBarTheme(
           backgroundColor: Colors.white,
-          foregroundColor: Colors.black,
           elevation: 0,
+          iconTheme: IconThemeData(color: Colors.black),
+          titleTextStyle: TextStyle(
+              color: Colors.black,
+              fontSize: 20,
+              fontWeight: FontWeight.bold,
+              fontFamily: 'Inter'),
         ),
       ),
-      initialRoute: '/',
-      routes: {
-        '/': (context) => const WelcomeScreen(),
-        '/home': (context) => const HomeScreen(),
-        '/profile': (context) => const ProfileScreen(),
-        '/project_detail': (context) => const ProjectDetailScreen(),
-      },
+      home: const WelcomeScreen(), // Start with the Welcome Screen
     );
   }
 }

@@ -1,109 +1,168 @@
 import 'package:flutter/material.dart';
 
+// Shows the details of a single project.
 class ProjectDetailScreen extends StatelessWidget {
   const ProjectDetailScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        leading: IconButton(
-          icon: const Icon(Icons.arrow_back),
-          onPressed: () => Navigator.pop(context),
-        ),
-        actions: const [
-          Icon(Icons.bookmark_border),
-          SizedBox(width: 8),
-          Icon(Icons.more_horiz),
-        ],
-      ),
-      body: SingleChildScrollView(
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Container(
-              height: 250,
-              color: Colors.grey[300],
-              child: const Center(child: Text('Project Image')),
+      body: CustomScrollView(
+        slivers: [
+          SliverAppBar(
+            expandedHeight: 350.0,
+            pinned: true,
+            leading: IconButton(
+              icon: const Icon(Icons.arrow_back, color: Colors.white),
+              onPressed: () => Navigator.of(context).pop(),
             ),
-            Padding(
-              padding: const EdgeInsets.all(16.0),
+            actions: [
+              IconButton(
+                icon: const Icon(Icons.bookmark_border, color: Colors.white, size: 28),
+                onPressed: () {},
+              )
+            ],
+            flexibleSpace: FlexibleSpaceBar(
+              background: Image.network(
+                'https://images.unsplash.com/photo-1542361345-89e58247f2d5?w=800',
+                fit: BoxFit.cover,
+                 color: Colors.black.withOpacity(0.3),
+                 colorBlendMode: BlendMode.darken,
+              ),
+            ),
+          ),
+          SliverToBoxAdapter(
+            child: Padding(
+              padding: const EdgeInsets.all(20.0),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  const Text(
-                    'Geometric Harmony',
-                    style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      const Flexible(
+                        child: Text(
+                          'Geometric Harmony',
+                          style: TextStyle(fontSize: 26, fontWeight: FontWeight.bold),
+                        ),
+                      ),
+                      Container(
+                        padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 4),
+                        decoration: BoxDecoration(
+                          color: Colors.grey.shade200,
+                          borderRadius: BorderRadius.circular(12)
+                        ),
+                        child: const Text('2022', style: TextStyle(fontWeight: FontWeight.bold))
+                      )
+                    ],
                   ),
+                  const SizedBox(height: 8),
                   const Text(
-                    'Studio Architectom • Berlin, Germany',
-                    style: TextStyle(color: Colors.grey),
-                  ),
-                  const SizedBox(height: 16),
-                  const Text(
-                    'A minimalist approach to urban architecture that explores the relationship between geometric forms and natural light. The structure creates different experiences throughout the day as shadows shift across its surfaces.',
-                    style: TextStyle(fontSize: 16),
+                    'Studio Archform • Berlin, Germany',
+                    style: TextStyle(fontSize: 16, color: Colors.grey),
                   ),
                   const SizedBox(height: 24),
                   const Text(
-                    'Gallery',
-                    style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                    'A minimalist approach to urban architecture that explores the relationship between geometric forms and natural light. The structure creates different experiences throughout the day as shadows shift across its surfaces.',
+                    style: TextStyle(fontSize: 15, height: 1.5, color: Colors.black87),
                   ),
-                  const SizedBox(height: 8),
+                  const SizedBox(height: 32),
+                  const Text('Gallery', style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
+                  const SizedBox(height: 16),
                   SizedBox(
-                    height: 120,
+                    height: 100,
                     child: ListView(
                       scrollDirection: Axis.horizontal,
                       children: [
-                        _buildGalleryImage('https://via.placeholder.com/150'),
-                        _buildGalleryImage('https://via.placeholder.com/150'),
-                        _buildGalleryImage('https://via.placeholder.com/150'),
+                        _buildGalleryImage('https://images.unsplash.com/photo-1542361345-89e58247f2d5?w=300'),
+                        _buildGalleryImage('https://images.unsplash.com/photo-1617082382955-23a0494a11a8?w=300'),
+                        _buildGalleryImage('https://images.unsplash.com/photo-1581351639913-c9769344b261?w=300'),
                       ],
                     ),
                   ),
-                  const SizedBox(height: 24),
-                  const Text(
-                    'Materials',
-                    style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
-                  ),
-                  const SizedBox(height: 8),
+                  const SizedBox(height: 32),
+                  const Text('Materials', style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
+                  const SizedBox(height: 16),
                   Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
-                      _buildMaterialChip('Concrete'),
-                      _buildMaterialChip('Steel'),
-                      _buildMaterialChip('Wood'),
-                      _buildMaterialChip('Glass'),
+                      _buildMaterialItem(Icons.layers, 'Concrete'),
+                      _buildMaterialItem(Icons.view_in_ar, 'Steel'),
+                      _buildMaterialItem(Icons.forest, 'Wood'),
+                      _buildMaterialItem(Icons.grid_on, 'Glass'),
                     ],
                   ),
+                   const SizedBox(height: 32),
+                   const Text('Designer', style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
+                   const SizedBox(height: 16),
+                   _buildDesignerCard(),
                 ],
               ),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+
+  Widget _buildGalleryImage(String url) {
+    return Padding(
+      padding: const EdgeInsets.only(right: 10.0),
+      child: ClipRRect(
+        borderRadius: BorderRadius.circular(12),
+        child: Image.network(url, width: 100, height: 100, fit: BoxFit.cover),
+      ),
+    );
+  }
+
+  Widget _buildMaterialItem(IconData icon, String label) {
+    return Column(
+      children: [
+        CircleAvatar(
+          radius: 30,
+          backgroundColor: Colors.grey.shade100,
+          child: Icon(icon, color: Colors.black, size: 28),
+        ),
+        const SizedBox(height: 8),
+        Text(label, style: const TextStyle(fontWeight: FontWeight.w500)),
+      ],
+    );
+  }
+
+   Widget _buildDesignerCard() {
+    return Card(
+      elevation: 0,
+      color: Colors.grey.shade50,
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+      child: Padding(
+        padding: const EdgeInsets.all(12.0),
+        child: Row(
+          children: [
+            const CircleAvatar(
+              radius: 25,
+              backgroundImage: NetworkImage('https://images.unsplash.com/photo-1580489944761-15a19d654956?w=100'),
+            ),
+            const SizedBox(width: 12),
+            const Expanded(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text('Sarah Lindemann', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16)),
+                  Text('Architect & Designer', style: TextStyle(color: Colors.grey)),
+                ],
+              ),
+            ),
+            ElevatedButton(
+              onPressed: () {},
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Colors.black,
+                shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
+              ),
+              child: const Text('Follow', style: TextStyle(color: Colors.white)),
             ),
           ],
         ),
       ),
     );
   }
-}
-
-Widget _buildGalleryImage(String imageUrl) {
-  return Container(
-    margin: const EdgeInsets.symmetric(horizontal: 4),
-    width: 120,
-    decoration: BoxDecoration(
-      color: Colors.grey[300],
-      borderRadius: BorderRadius.circular(8),
-      image: DecorationImage(
-        image: NetworkImage(imageUrl),
-        fit: BoxFit.cover,
-      ),
-    ),
-  );
-}
-
-Widget _buildMaterialChip(String label) {
-  return Chip(
-    label: Text(label),
-    backgroundColor: Colors.grey[200],
-  );
 }
