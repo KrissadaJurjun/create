@@ -29,14 +29,14 @@ class ArtistProfileScreen extends StatelessWidget {
                     children: [
                       const CircleAvatar(
                         radius: 50,
-                        backgroundImage: NetworkImage('https://images.unsplash.com/photo-1580489944761-15a19d654956?w=200'),
+                        backgroundImage: NetworkImage('https://scontent.fbkk12-6.fna.fbcdn.net/v/t39.30808-6/509430474_1866758960786505_8350560371033300404_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeE08n8WDB5zu6B2-ByewI7qFzRIHz6z_mgXNEgfPrP-aFf-R5LVfph18XLvSlNx5ZdWZYRvwMFrT6umM2JrO7HW&_nc_ohc=pBmYhcjWuaoQ7kNvwEvR-Sh&_nc_oc=AdlGPWfETiyh_Bz4kjuzDgPjwON4wy5YdAXC2ekdra2AuWOLe_gEW6vyAx82c0fmPkDcbGMjrYWAHEVniNNCt2k8&_nc_zt=23&_nc_ht=scontent.fbkk12-6.fna&_nc_gid=ZNSa5mPVuON8M8ZJY_gzCg&oh=00_AfXwoSGpuH273zfAyCuH-cRSabT1dDPnPWgrDs2TvSdXFw&oe=68AB2546'),
                       ),
                       const SizedBox(height: 16),
-                      const Text('Sarah Lindemann', style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold)),
-                      const Text('Architect & Designer', style: TextStyle(color: Colors.grey, fontSize: 16)),
+                      const Text('Krissada Jurjun', style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold)),
+                      const Text('UI Designer', style: TextStyle(color: Colors.grey, fontSize: 16)),
                       const SizedBox(height: 16),
                       const Text(
-                        'Creating spaces that blend minimalism with functionality. Based in Berlin, working globally.',
+                        'Creating spaces that blend minimalism with functionality. Based in Nonthaburi, working globally.',
                         textAlign: TextAlign.center,
                         style: TextStyle(fontSize: 15, height: 1.4),
                       ),
@@ -44,9 +44,9 @@ class ArtistProfileScreen extends StatelessWidget {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
-                          StatItem(count: '42', label: 'Projects'),
-                          StatItem(count: '15', label: 'Years'),
-                          StatItem(count: '8', label: 'Awards'),
+                          StatItem(count: '1', label: 'Projects'),
+                          StatItem(count: '1', label: 'Years'),
+                          StatItem(count: '0', label: 'Awards'),
                         ],
                       ),
                       const SizedBox(height: 24),

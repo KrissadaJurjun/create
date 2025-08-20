@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
-import 'screens/gallery_screen.dart';
-import 'screens/artist_profile_screen.dart';
+import '../screens/gallery_screen.dart';
+import '../screens/artist_profile_screen.dart';
 
 void main() {
   runApp(const MyApp());
