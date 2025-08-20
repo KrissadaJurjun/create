@@ -26,7 +26,7 @@ class ProjectDetailScreen extends StatelessWidget {
               background: Image.network(
                 'https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.tripadvisor.com%2FAttraction_Review-g297922-d552838-Reviews-Hua_Hin_Beach-Hua_Hin_Prachuap_Khiri_Khan_Province.html&psig=AOvVaw3gKopkA12RWcx6_lKUqOQA&ust=1755028795181000&source=images&cd=vfe&opi=89978449&ved=0CBUQjRxqFwoTCJCZ9_DFg48DFQAAAAAdAAAAABAE',
                 fit: BoxFit.cover,
-                 color: Colors.black.withOpacity(0.3),
+                 color: Colors.black.withValues(alpha: 0.3),
                  colorBlendMode: BlendMode.darken,
               ),
             ),
