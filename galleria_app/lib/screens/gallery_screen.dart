@@ -86,7 +86,7 @@ class GalleryScreen extends StatelessWidget {
       {
         'image': 'https://scontent.fbkk13-1.fna.fbcdn.net/v/t39.30808-1/486554803_1915607449268787_7219523213189300594_n.jpg?stp=dst-jpg_s200x200_tt6&_nc_cat=105&ccb=1-7&_nc_sid=e99d92&_nc_eui2=AeGBLXJkOyJIqiUQYPQUKPTnymsIRszGM0XKawhGzMYzRW30RwoAi_CelY_KifFL-fzLucGjyuroK494jxIW5zsq&_nc_ohc=FlfdVxi9CFMQ7kNvwG11YsP&_nc_oc=Adm2EAlEn8FF-e2I86fI4IzZ8Bg9CsNB--ga-ZWnPnCVf6Q0mBDv5RCM-k_NM4upAogBPyajdg1KTfnX5PxAxldk&_nc_zt=24&_nc_ht=scontent.fbkk13-1.fna&_nc_gid=cGO869nHGAKkqE96fBIvkQ&oh=00_AfXCchMuyj2-Mpir0NKPdQOeROcDMibYQ6bV9gk_0SBLMA&oe=68A02ADC',
         'title': 'Chatchawee Rajchaposri ',
-        'subtitle': 'ไอเอ๋อ ไอหนูดัมโบ้',
+        'subtitle': 'Genius UI Designer',
       },
     ];
 
