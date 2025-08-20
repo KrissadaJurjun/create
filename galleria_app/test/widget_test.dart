@@ -10,7 +10,7 @@ import 'package:flutter_test/flutter_test.dart';
 
 // Update the import path to the correct location of your main.dart file
 // Update the import path to the correct location of your main.dart file
-import '../lib/main.dart';
+import 'package:galleria_app/main.dart';
 
 void main() {
   testWidgets('Counter increments smoke test', (WidgetTester tester) async {
